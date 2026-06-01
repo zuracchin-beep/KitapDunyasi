@@ -2,148 +2,103 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Kitaplarımız | Fiyat Listesi</title>
+    <title>Bilge Kitaplığı | Sepetim</title>
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 15px 20px;
-            text-align: left;
-        }
-        th {
-            background-color: #5c3d2e;
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-        td {
-            border-bottom: 1px solid #eee;
-            font-size: 15px;
-        }
-        tr:nth-child(even) {
-            background-color: #fbf9f6;
-        }
-        tr:hover {
-            background-color: #f3ede6;
-            transition: background-color 0.2s ease;
-        }
-        .price-tag {
-            font-weight: bold;
-            color: #b85c38;
-        }
-    </style>
 </head>
 <body>
 
     <nav>
         <a href="index.html">Anasayfa</a>
-        <a href="books.html">Kitaplarımız</a>
-        <a href="media.html">Medya</a>
+        <a href="books.html">Sepetim</a>
+        <a href="media.html">Medya Odası</a>
         <a href="contact.html">İletişim</a>
     </nav>
 
     <div class="container">
-        <h2>Kitap Kataloğu ve Fiyat Listesi</h2>
-        <p>Mağazamızda aktif olarak satışı yapılan güncel kitap listesi ve stok durumları aşağıda belirtilmiştir:</p>
+        <h2>Alışveriş Sepetim</h2>
+        <p>Anasayfadan seçtiğiniz harika felsefe ve edebiyat eserleri:</p>
 
-        <table>
+        <!-- Dinamik Sepet Listesi Tablosu -->
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left;">
             <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Yazar</th>
-                    <th>Kategori</th>
-                    <th>Stok Durumu</th>
-                    <th>Fiyat</th>
+                <tr style="background-color: #4a6b53; color: white;">
+                    <th style="padding: 12px;">Görsel</th>
+                    <th style="padding: 12px;">Kitap Adı</th>
+                    <th style="padding: 12px;">Adet</th>
+                    <th style="padding: 12px;">Birim Fiyat</th>
+                    <th style="padding: 12px;">Toplam</th>
+                    <th style="padding: 12px;">İşlem</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Dönüşüm</td>
-                    <td>Franz Kafka</td>
-                    <td>Dünya Klasikleri</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">65 TL</td>
-                </tr>
-                <tr>
-                    <td>Devlet</td>
-                    <td>Platon</td>
-                    <td>Felsefe</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">120 TL</td>
-                </tr>
-                <tr>
-                    <td>Suç ve Ceza</td>
-                    <td>Dostoyevski</td>
-                    <td>Dünya Klasikleri</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">180 TL</td>
-                </tr>
-                <tr>
-                    <td>Böyle Buyurdu Zerdüşt</td>
-                    <td>Friedrich Nietzsche</td>
-                    <td>Felsefe</td>
-                    <td style="color: red; font-weight: 500;">Tükendi</td>
-                    <td class="price-tag">140 TL</td>
-                </tr>
-                <tr>
-                    <td>1984</td>
-                    <td>George Orwell</td>
-                    <td>Distopya</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">95 TL</td>
-                </tr>
-                <tr>
-                    <td>Simyacı</td>
-                    <td>Paulo Coelho</td>
-                    <td>Edebiyat</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">110 TL</td>
-                </tr>
-                <tr>
-                    <td>Yeraltından Notlar</td>
-                    <td>Dostoyevski</td>
-                    <td>Felsefe / Edebiyat</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">75 TL</td>
-                </tr>
-                <tr>
-                    <td>Kürk Mantolu Madonna</td>
-                    <td>Sabahattin Ali</td>
-                    <td>Türk Edebiyatı</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">55 TL</td>
-                </tr>
-                <tr>
-                    <td>Denemeler</td>
-                    <td>Montaigne</td>
-                    <td>Felsefe / Deneme</td>
-                    <td style="color: green; font-weight: 500;">Var</td>
-                    <td class="price-tag">85 TL</td>
-                </tr>
-                <tr>
-                    <td>Körlük</td>
-                    <td>José Saramago</td>
-                    <td>Edebiyat</td>
-                    <td style="color: red; font-weight: 500;">Tükendi</td>
-                    <td class="price-tag">130 TL</td>
-                </tr>
+            <tbody id="sepetTabloGövde">
+                <!-- JavaScript burayı otomatik dolduracak -->
             </tbody>
         </table>
+
+        <!-- Toplam Fiyat Alanı -->
+        <div style="margin-top: 30px; text-align: right; padding: 20px; background-color: #e8efe9; border-radius: 8px;">
+            <h3 style="border: none; margin: 0; padding: 0; color: #344a3a;">
+                Genel Toplam: <span id="sepetToplamTutar">0.00</span> TL
+            </h3>
+            <button onclick="sepetiTemizle()" style="background-color: #bd1522; color: white; border: none; padding: 10px 15px; border-radius: 6px; margin-top: 15px; font-weight: bold; cursor: pointer;">Sepeti Temizle</button>
+        </div>
     </div>
 
     <footer>
         <p>Grup Üyeleri: İpek Demircioğlu & Yaren Tay | Web Tasarım Dönem Projesi</p>
     </footer>
+
+    <!-- Sepet Hesaplama ve Listeleme Motoru -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            sepetiListele();
+        });
+
+        function sepetiListele() {
+            let sepet = JSON.parse(localStorage.getItem('sepet')) || [];
+            let tabloGövde = document.getElementById('sepetTabloGövde');
+            let toplamAlan = document.getElementById('sepetToplamTutar');
+            
+            tabloGövde.innerHTML = "";
+            let genelToplam = 0;
+
+            if (sepet.length === 0) {
+                tabloGövde.innerHTML = `<tr><td colspan="6" style="padding: 20px; text-align: center; color: #777;">Sepetiniz şu anda boş. Anasayfadan kitap ekleyebilirsiniz!</td></tr>`;
+                toplamAlan.innerText = "0.00";
+                return;
+            }
+
+            sepet.forEach((item, index) => {
+                let satirToplam = item.fiyat * item.adet;
+                genelToplam += satirToplam;
+
+                tabloGövde.innerHTML += `
+                    <tr style="border-bottom: 1px solid #e8efe9;">
+                        <td style="padding: 12px;"><img src="${item.resim}" style="width: 50px; height: 75px; object-fit: cover; border-radius: 4px;"></td>
+                        <td style="padding: 12px; font-weight: bold; color: #2d3a31;">${item.ad}</td>
+                        <td style="padding: 12px; font-weight: bold;">${item.adet} Adet</td>
+                        <td style="padding: 12px;">${item.fiyat.toFixed(2)} TL</td>
+                        <td style="padding: 12px; color: #4a6b53; font-weight: bold;">${satirToplam.toFixed(2)} TL</td>
+                        <td style="padding: 12px;"><button onclick="urunSil(${index})" style="background: none; border: none; color: #bd1522; font-weight: bold; cursor: pointer;">Kaldır</button></td>
+                    </tr>
+                `;
+            });
+
+            toplamAlan.innerText = genelToplam.toFixed(2);
+        }
+
+        function urunSil(index) {
+            let sepet = JSON.parse(localStorage.getItem('sepet')) || [];
+            sepet.splice(index, 1);
+            localStorage.setItem('sepet', JSON.stringify(sepet));
+            sepetiListele();
+        }
+
+        function sepetiTemizle() {
+            localStorage.removeItem('sepet');
+            sepetiListele();
+        }
+    </script>
 
 </body>
 </html>
