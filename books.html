@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Bilge Kitaplığı | Sepetim</title>
+    <title>Kitap Dünyası | Sepetim</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +16,8 @@
 
     <div class="container">
         <h2>Alışveriş Sepetim</h2>
-        <p>Anasayfadan seçtiğiniz harika felsefe ve edebiyat eserleri:</p>
+        <p>Kitap Dünyası'ndan seçtiğiniz harika felsefe ve edebiyat eserleri:</p>
 
-        <!-- Dinamik Sepet Listesi Tablosu -->
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left;">
             <thead>
                 <tr style="background-color: #4a6b53; color: white;">
@@ -31,11 +30,9 @@
                 </tr>
             </thead>
             <tbody id="sepetTabloGövde">
-                <!-- JavaScript burayı otomatik dolduracak -->
-            </tbody>
+                </tbody>
         </table>
 
-        <!-- Toplam Fiyat Alanı -->
         <div style="margin-top: 30px; text-align: right; padding: 20px; background-color: #e8efe9; border-radius: 8px;">
             <h3 style="border: none; margin: 0; padding: 0; color: #344a3a;">
                 Genel Toplam: <span id="sepetToplamTutar">0.00</span> TL
@@ -48,7 +45,6 @@
         <p>Grup Üyeleri: İpek Demircioğlu & Yaren Tay | Web Tasarım Dönem Projesi</p>
     </footer>
 
-    <!-- Sepet Hesaplama ve Listeleme Motoru -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             sepetiListele();
