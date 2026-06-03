@@ -1,81 +1,80 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kitap Dünyası | Anasayfa</title>
+    <title>Kitap Dünyası | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="books.html">Sepetim</a>
-        <a href="media.html">Medya Odası</a>
-        <a href="contact.html">İletişim</a>
+        <a href="index.html">Home</a>
+        <a href="books.html">Cart</a>
+        <a href="media.html">Media Room</a>
+        <a href="login.html">Sign In / Sign Up</a>
     </nav>
 
     <div class="container">
-        <h1>Kitap Dünyası'na Hoş Geldiniz</h1>
-        <p>Felsefe ve edebiyat dünyasının en nadide, zihin açıcı eserlerini sizler için tek bir çatıda topladık. Keyifli keşifler dileriz.</p>
+        <h1>Welcome to Kitap Dünyası</h1>
+        <p>We have gathered the most exquisite, mind-opening masterpieces of the philosophy and literature world under a single roof for you. We wish you a pleasant discovery.</p>
         
-        <h3 style="margin-top: 40px;">Haftanın Öne Çıkan Eserleri</h3>
+        <h3 style="margin-top: 40px;">Featured Books of the Week</h3>
         
-        <!-- Trendyol Vitrini: 10 Kitap Eksiksiz Grid Düzeni -->
         <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 25px;">
             
-            <!-- Kart 1: Dönüşüm -->
+            <!-- Book 1 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k1.jpg" alt="Dönüşüm" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Dönüşüm</p>
+                    <img src="images/k1.jpg" alt="The Metamorphosis" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">The Metamorphosis</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Franz Kafka</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">65.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Dönüşüm', 65.00, 'images/k1.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('The Metamorphosis', 65.00, 'images/k1.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 2: Devlet -->
+            <!-- Book 2 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k2.jpg" alt="Devlet" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Devlet</p>
-                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Platon</p>
+                    <img src="images/k2.jpg" alt="The Republic" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">The Republic</p>
+                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Plato</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">120.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Devlet', 120.00, 'images/k2.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('The Republic', 120.00, 'images/k2.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 3: Suç ve Ceza -->
+            <!-- Book 3 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k3.jpg" alt="Suç ve Ceza" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Suç ve Ceza</p>
-                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Dostoyevski</p>
+                    <img src="images/k3.jpg" alt="Crime and Punishment" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Crime and Punishment</p>
+                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Fyodor Dostoevsky</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">180.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Suç ve Ceza', 180.00, 'images/k3.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Crime and Punishment', 180.00, 'images/k3.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 4: Böyle Buyurdu Zerdüşt -->
+            <!-- Book 4 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k4.jpg" alt="Böyle Buyurdu Zerdüşt" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Böyle Buyurdu Zerdüşt</p>
+                    <img src="images/k4.jpg" alt="Thus Spoke Zarathustra" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Thus Spoke Zarathustra</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Friedrich Nietzsche</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">140.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Böyle Buyurdu Zerdüşt', 140.00, 'images/k4.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Thus Spoke Zarathustra', 140.00, 'images/k4.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 5: 1984 -->
+            <!-- Book 5 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <img src="images/k5.jpg" alt="1984" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
@@ -84,72 +83,72 @@
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">95.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('1984', 95.00, 'images/k5.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('1984', 95.00, 'images/k5.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 6: Simyacı -->
+            <!-- Book 6 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k6.jpg" alt="Simyacı" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Simyacı</p>
+                    <img src="images/k6.jpg" alt="The Alchemist" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">The Alchemist</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Paulo Coelho</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">110.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Simyacı', 110.00, 'images/k6.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('The Alchemist', 110.00, 'images/k6.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 7: Yeraltından Notlar -->
+            <!-- Book 7 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k7.jpg" alt="Yeraltından Notlar" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Yeraltından Notlar</p>
-                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Dostoyevski</p>
+                    <img src="images/k7.jpg" alt="Notes from Underground" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Notes from Underground</p>
+                    <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Fyodor Dostoevsky</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">75.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Yeraltından Notlar', 75.00, 'images/k7.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Notes from Underground', 75.00, 'images/k7.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 8: Kürk Mantolu Madonna -->
+            <!-- Book 8 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k8.jpg" alt="Kürk Mantolu Madonna" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Kürk Mantolu Madonna</p>
+                    <img src="images/k8.jpg" alt="Madonna in a Fur Coat" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Madonna in a Fur Coat</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Sabahattin Ali</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">55.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Kürk Mantolu Madonna', 55.00, 'images/k8.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Madonna in a Fur Coat', 55.00, 'images/k8.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 9: Denemeler -->
+            <!-- Book 9 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k9.jpg" alt="Denemeler" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Denemeler</p>
+                    <img src="images/k9.jpg" alt="Essays" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Essays</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">Montaigne</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">85.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Denemeler', 85.00, 'images/k9.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Essays', 85.00, 'images/k9.jpg')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- Kart 10: Körlük -->
+            <!-- Book 10 -->
             <div style="text-align:left; width: 180px; background:#fff; border:1px solid #e1ebd5; padding:12px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <img src="images/k10.jpg" alt="Körlük" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
-                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Körlük</p>
+                    <img src="images/k10.jpg" alt="Blindness" style="width:160px; height:240px; border-radius: 6px; object-fit: cover; display: block; margin: 0 auto;">
+                    <p style="font-weight: bold; margin: 8px 0 2px 0; font-size:14px; color:#2d3a31; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Blindness</p>
                     <p style="font-size:12px; color:#777; margin:0 0 8px 0;">José Saramago</p>
                 </div>
                 <div>
                     <p style="font-weight: bold; color:#4a6b53; margin:0; font-size:16px;">130.00 TL</p>
-                    <button class="btn-add" onclick="sepeteEkle('Körlük', 130.00, 'images/k10.jpg')">Sepete Ekle</button>
+                    <button class="btn-add" onclick="sepeteEkle('Blindness', 130.00, 'images/k10.jpg')">Add to Cart</button>
                 </div>
             </div>
 
@@ -157,10 +156,9 @@
     </div>
 
     <footer>
-        <p>Grup Üyeleri: İpek Demircioğlu & Yaren Tay | Web Tasarım Dönem Projesi</p>
+        <p>Project Members: İpek Demircioğlu & Yaren Tay | Web Design Term Project</p>
     </footer>
 
-    <!-- Sepet Mekanizması -->
     <script>
         function sepeteEkle(ad, fiyat, resim) {
             let sepet = JSON.parse(localStorage.getItem('sepet')) || [];
@@ -173,7 +171,7 @@
             }
 
             localStorage.setItem('sepet', JSON.stringify(sepet));
-            alert(ad + " sepetinize eklendi!");
+            alert(ad + " has been added to your cart!");
         }
     </script>
 
