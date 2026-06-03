@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kitap Dünyası | Sepetim</title>
+    <title>Kitap Dünyası | Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Anasayfa</a>
-        <a href="books.html">Sepetim</a>
-        <a href="media.html">Medya Odası</a>
-        <a href="contact.html">İletişim</a>
+        <a href="index.html">Home</a>
+        <a href="books.html">Cart</a>
+        <a href="media.html">Media Room</a>
+        <a href="login.html">Sign In / Sign Up</a>
     </nav>
 
     <div class="container">
-        <h2>Alışveriş Sepetim</h2>
-        <p>Kitap Dünyası'ndan seçtiğiniz harika felsefe ve edebiyat eserleri:</p>
+        <h2>Your Shopping Cart</h2>
+        <p>Great literary works selected from Kitap Dünyası:</p>
 
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: left;">
             <thead>
                 <tr style="background-color: #4a6b53; color: white;">
-                    <th style="padding: 12px;">Görsel</th>
-                    <th style="padding: 12px;">Kitap Adı</th>
-                    <th style="padding: 12px;">Adet</th>
-                    <th style="padding: 12px;">Birim Fiyat</th>
-                    <th style="padding: 12px;">Toplam</th>
-                    <th style="padding: 12px;">İşlem</th>
+                    <th style="padding: 12px;">Cover</th>
+                    <th style="padding: 12px;">Book Title</th>
+                    <th style="padding: 12px;">Quantity</th>
+                    <th style="padding: 12px;">Unit Price</th>
+                    <th style="padding: 12px;">Total</th>
+                    <th style="padding: 12px;">Action</th>
                 </tr>
             </thead>
             <tbody id="sepetTabloGövde">
-                </tbody>
+                <!-- JavaScript handles here -->
+            </tbody>
         </table>
 
         <div style="margin-top: 30px; text-align: right; padding: 20px; background-color: #e8efe9; border-radius: 8px;">
             <h3 style="border: none; margin: 0; padding: 0; color: #344a3a;">
-                Genel Toplam: <span id="sepetToplamTutar">0.00</span> TL
+                Grand Total: <span id="sepetToplamTutar">0.00</span> TL
             </h3>
-            <button onclick="sepetiTemizle()" style="background-color: #bd1522; color: white; border: none; padding: 10px 15px; border-radius: 6px; margin-top: 15px; font-weight: bold; cursor: pointer;">Sepeti Temizle</button>
+            <button onclick="sepetiTemizle()" style="background-color: #bd1522; color: white; border: none; padding: 10px 15px; border-radius: 6px; margin-top: 15px; font-weight: bold; cursor: pointer;">Clear Cart</button>
         </div>
     </div>
 
     <footer>
-        <p>Grup Üyeleri: İpek Demircioğlu & Yaren Tay | Web Tasarım Dönem Projesi</p>
+        <p>Project Members: İpek Demircioğlu & Yaren Tay | Web Design Term Project</p>
     </footer>
 
     <script>
@@ -59,7 +60,7 @@
             let genelToplam = 0;
 
             if (sepet.length === 0) {
-                tabloGövde.innerHTML = `<tr><td colspan="6" style="padding: 20px; text-align: center; color: #777;">Sepetiniz şu anda boş. Anasayfadan kitap ekleyebilirsiniz!</td></tr>`;
+                tabloGövde.innerHTML = `<tr><td colspan="6" style="padding: 20px; text-align: center; color: #777;">Your cart is currently empty. Add books from the Home page!</td></tr>`;
                 toplamAlan.innerText = "0.00";
                 return;
             }
@@ -72,10 +73,10 @@
                     <tr style="border-bottom: 1px solid #e8efe9;">
                         <td style="padding: 12px;"><img src="${item.resim}" style="width: 50px; height: 75px; object-fit: cover; border-radius: 4px;"></td>
                         <td style="padding: 12px; font-weight: bold; color: #2d3a31;">${item.ad}</td>
-                        <td style="padding: 12px; font-weight: bold;">${item.adet} Adet</td>
+                        <td style="padding: 12px; font-weight: bold;">${item.adet} Pcs</td>
                         <td style="padding: 12px;">${item.fiyat.toFixed(2)} TL</td>
                         <td style="padding: 12px; color: #4a6b53; font-weight: bold;">${satirToplam.toFixed(2)} TL</td>
-                        <td style="padding: 12px;"><button onclick="urunSil(${index})" style="background: none; border: none; color: #bd1522; font-weight: bold; cursor: pointer;">Kaldır</button></td>
+                        <td style="padding: 12px;"><button onclick="urunSil(${index})" style="background: none; border: none; color: #bd1522; font-weight: bold; cursor: pointer;">Remove</button></td>
                     </tr>
                 `;
             });
